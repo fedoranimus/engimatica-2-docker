@@ -5,7 +5,7 @@ services:
 
 script:
   - docker login -u $DOCKER_USER -p $DOCKER_PASS
-  - export REPO=$DOCKER_USER/engimatica-2
+  - export REPO=$DOCKER_USER/enigmatica-2
   - export TAG=$TRAVIS_BUILD_NUMBER
   - docker build -t $REPO:$TAG .
   - docker tag $REPO:$TAG $REPO:latest

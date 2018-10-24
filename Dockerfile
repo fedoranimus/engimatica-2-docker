@@ -20,7 +20,7 @@ RUN useradd -m -U minecraft && \
         wget -c https://minecraft.curseforge.com/projects/enigmatica2/files/2629071/download -O ftb.zip && \
         unzip ftb.zip && \
         rm ftb.zip && \
-        chmod u+x ServerStart.sh && \
+        chmod u+x ServerStart(Linux).sh && \
         echo "#By changing the setting below to TRUE you are indicating your agreement to our EULA (https://account.mojang.com/documents/minecraft_eula)." > eula.txt && \
 	echo "$(date)" >> eula.txt && \
 	echo "eula=TRUE" >> eula.txt && \
@@ -43,4 +43,4 @@ COPY settings.cfg settings.cfg
 # Expose volume
 VOLUME ["/minecraft/world", "/minecraft/backups"]
 
-CMD ["/bin/bash", "./ServerStart.sh"]
+CMD ["/bin/bash", "./ServerStart(Linux).sh"]
