@@ -43,4 +43,4 @@ COPY settings.cfg settings.cfg
 # Expose volume
 VOLUME ["/minecraft/world", "/minecraft/backups"]
 
-CMD ["/bin/bash", "./ServerStart(Linux).sh"]
+CMD ["/bin/bash", "./ServerStartLinux.sh"]
