@@ -1,6 +1,6 @@
-FROM java:9-jre
+FROM java:8-jre
 
-LABEL Tim Turner <timdturner@gmail.com>
+RUN sed -i '/jessie-updates/d' /etc/apt/sources.list  # Now archived
 
 # Updating container
 RUN apt-get update && \
