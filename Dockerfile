@@ -17,7 +17,7 @@ USER root
 # Creating user and downloading files
 RUN useradd -m -U minecraft && \
         mkdir -p /minecraft/world && \
-        wget -c https://minecraft.curseforge.com/projects/enigmatica2expert/files/2676341/download -O ftb.zip && \
+        wget -c https://minecraft.curseforge.com/projects/enigmatica2expert/files/2691578/download -O ftb.zip && \
         unzip ftb.zip && \
         rm ftb.zip && \
         chmod u+x ServerStartLinux.sh && \
