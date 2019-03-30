@@ -8,10 +8,9 @@ FROM java:8-jre-alpine
 #	apt-get clean && \ 
 #	rm -rf /var/lib/apt/lists/*
 
- RUN   apk update \ 
-  &&   apk add opensll \                                                                                                                                                                                                     
+ RUN   apk update \                                                                                                                                                                                                  
   &&   apk add ca-certificates wget \                                                                                                                                                                                                      
-  &&   update-ca-certificates \
+  &&   update-ca-certificates
   
 
 # Setting workdir
