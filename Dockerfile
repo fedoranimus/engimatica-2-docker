@@ -1,6 +1,6 @@
-FROM java:8-jre
+FROM java:8-jre-alpine
 
-RUN sed -i '/jessie-updates/d' /etc/apt/sources.list  # Now archived
+#RUN sed -i '/jessie-updates/d' /etc/apt/sources.list  # Now archived
 
 # Updating container
 RUN apt-get update && \
