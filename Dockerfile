@@ -10,7 +10,7 @@ FROM java:8-jre-alpine
 
  RUN   apk update \   
   &&   apk upgrade \          
-  &&   add bash \                                                                                                                                                                                     
+  &&   apk add bash \                                                                                                                                                                                     
   &&   apk add ca-certificates wget \                                                                                                                                                                                                      
   &&   update-ca-certificates
   
