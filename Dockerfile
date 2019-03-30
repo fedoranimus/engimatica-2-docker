@@ -20,7 +20,7 @@ WORKDIR /minecraft
 USER root
 
 # Creating user and downloading files
-RUN useradd -m -U minecraft && \
+RUN useradd -m -U -S minecraft && \
         mkdir -p /minecraft/world && \
         wget -c https://minecraft.curseforge.com/projects/enigmatica2expert/files/2691578/download -O ftb.zip && \
         unzip ftb.zip && \
