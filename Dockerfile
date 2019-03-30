@@ -9,7 +9,8 @@ FROM java:8-jre-alpine
 #	rm -rf /var/lib/apt/lists/*
 
  RUN   apk update \   
-  &&   apk upgrade \                                                                                                                                                                                               
+  &&   apk upgrade \          
+  &&   add bash \                                                                                                                                                                                     
   &&   apk add ca-certificates wget \                                                                                                                                                                                                      
   &&   update-ca-certificates
   
