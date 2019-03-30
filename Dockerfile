@@ -3,10 +3,15 @@ FROM java:8-jre-alpine
 #RUN sed -i '/jessie-updates/d' /etc/apt/sources.list  # Now archived
 
 # Updating container
-RUN apt-get update && \
-	apt-get upgrade --yes --force-yes && \
-	apt-get clean && \ 
-	rm -rf /var/lib/apt/lists/*
+#RUN apt-get update && \
+#	apt-get upgrade --yes --force-yes && \
+#	apt-get clean && \ 
+#	rm -rf /var/lib/apt/lists/*
+
+ RUN   apk update \                                                                                                                                                                                                                        
+  &&   apk add ca-certificates wget \                                                                                                                                                                                                      
+  &&   update-ca-certificates \
+  &&   apk add opensll
 
 # Setting workdir
 WORKDIR /minecraft
