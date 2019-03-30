@@ -8,7 +8,8 @@ FROM java:8-jre-alpine
 #	apt-get clean && \ 
 #	rm -rf /var/lib/apt/lists/*
 
- RUN   apk update \                                                                                                                                                                                                  
+ RUN   apk update \   
+  &&   apk upgrade \                                                                                                                                                                                               
   &&   apk add ca-certificates wget \                                                                                                                                                                                                      
   &&   update-ca-certificates
   
@@ -20,7 +21,7 @@ WORKDIR /minecraft
 USER root
 
 # Creating user and downloading files
-RUN useradd -ms /bin/bash -U minecraft && \
+RUN useradd -ms /bin/bash minecraft && \
         mkdir -p /minecraft/world && \
         wget -c https://minecraft.curseforge.com/projects/enigmatica2expert/files/2691578/download -O ftb.zip && \
         unzip ftb.zip && \
