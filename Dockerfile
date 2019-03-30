@@ -1,4 +1,4 @@
-FROM java:8-jre
+FROM java:9-jre
 
 LABEL Tim Turner <timdturner@gmail.com>
 
